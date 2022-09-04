@@ -11,7 +11,9 @@ namespace Siren
 {
     class DBconnection
     {
-        public string conn = "";
+        public  string conn = "Datasource = 127.0.0.1;  username=root;password=;database=siren_db;Allow User Variables=True";
+        MySqlConnection connection = new MySqlConnection();
+        MySqlCommand command = new MySqlCommand();
         public bool check_connection(string conn)
 
         {

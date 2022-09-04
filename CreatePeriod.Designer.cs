@@ -89,6 +89,7 @@ namespace Siren
             this.saveperiod_btn.TabIndex = 6;
             this.saveperiod_btn.Text = "Save Period";
             this.saveperiod_btn.UseVisualStyleBackColor = false;
+            this.saveperiod_btn.Click += new System.EventHandler(this.saveperiod_btn_Click);
             // 
             // input_periodTime
             // 
