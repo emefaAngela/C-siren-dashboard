@@ -30,5 +30,25 @@ namespace Siren
             ManagePeriods managePeriods = new ManagePeriods();
             managePeriods.Show();
         }
+
+        private void Currenttime_TextChanged(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
+            Currenttime.Text= now.ToString("HH:mm:ss");
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
+            Currenttime.Text = now.ToString("HH:mm:ss");
+        }
     }
 }

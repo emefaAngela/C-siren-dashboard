@@ -37,7 +37,7 @@ namespace Siren
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Currenttime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,21 +114,24 @@ namespace Siren
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 26);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // dateTimePicker1
+            // Currenttime
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(253, 279);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(316, 30);
-            this.dateTimePicker1.TabIndex = 8;
+            this.Currenttime.AutoSize = true;
+            this.Currenttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Currenttime.ForeColor = System.Drawing.Color.Blue;
+            this.Currenttime.Location = new System.Drawing.Point(376, 267);
+            this.Currenttime.Name = "Currenttime";
+            this.Currenttime.Size = new System.Drawing.Size(0, 25);
+            this.Currenttime.TabIndex = 9;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Currenttime);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -137,9 +140,12 @@ namespace Siren
             this.Controls.Add(this.label2);
             this.Controls.Add(this.showPeriods_btn);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +161,6 @@ namespace Siren
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label Currenttime;
     }
 }
