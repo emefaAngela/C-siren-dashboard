@@ -23,26 +23,36 @@ namespace Siren
 
         private void home_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Home home = new Home();
+            home.Show();
 
         }
 
         private void saveperiod_btn_Click(object sender, EventArgs e)
         {
-            String period_name = input_periodName.Text;
-            String period_time = input_periodTime.Text;
+            String p_name = input_periodName.Text;
+            String p_time = input_periodTime.Text;
+            DateTime date = DateTime.Today;
+           
+            //date.ToString().ToString();
 
-            if(period_name!="" && period_time != "")
+            if (p_name != "" && p_time != "")
             {
                 DBconnection dBconnection = new DBconnection();
-                connection.Open();
+                //connection.Open();
                 connection = new MySqlConnection(dBconnection.conn);
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "Insert into periods (period_name,period_time) values(?period_name,?period_time)";
-                command.Parameters.AddWithValue(@period_name, "period_name");
-                command.Parameters.AddWithValue(@period_time, "period_time");
+                connection.Open();
+                command = new MySqlCommand("Insert into periods (period_name,period_time,date_of_creation) values(?p_name,?p_time,?date)", connection);
+
+                command.Parameters.AddWithValue("?p_name", p_name);
+                command.Parameters.AddWithValue("?p_time", p_time);
+                command.Parameters.AddWithValue("?date", "date");
+
+
                 command.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("A new Period has been created successfully");
 
 
 
@@ -50,16 +60,19 @@ namespace Siren
             }
             else
             {
-                DBconnection dBconnection = new DBconnection();
-                bool source_result = dBconnection.check_connection("Datasource = 127.0.0.1;  username=root;password=;database=siren_db;Allow User Variables=True");
+                //    DBconnection dBconnection = new DBconnection();
+                //    bool source_result = dBconnection.check_connection("Datasource = 127.0.0.1;  username=root;password=;database=siren_db;Allow User Variables=True");
 
-                if (source_result == false)
+                //    if (source_result == false)
 
-                {
+                //    {
 
-                    MessageBox.Show("Error in source connection");
+                //        MessageBox.Show("Error in source connection");
 
-                }
+                //        //}
+
+                //}
+                MessageBox.Show("Empty Fields");
             }
         }
     }

@@ -33,11 +33,11 @@ namespace Siren
             this.panel2 = new System.Windows.Forms.Panel();
             this.home_btn = new System.Windows.Forms.Button();
             this.saveperiod_btn = new System.Windows.Forms.Button();
-            this.input_periodTime = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.input_periodName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.input_periodTime = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,9 +53,9 @@ namespace Siren
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.input_periodTime);
             this.panel2.Controls.Add(this.home_btn);
             this.panel2.Controls.Add(this.saveperiod_btn);
-            this.panel2.Controls.Add(this.input_periodTime);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.input_periodName);
@@ -90,13 +90,6 @@ namespace Siren
             this.saveperiod_btn.Text = "Save Period";
             this.saveperiod_btn.UseVisualStyleBackColor = false;
             this.saveperiod_btn.Click += new System.EventHandler(this.saveperiod_btn_Click);
-            // 
-            // input_periodTime
-            // 
-            this.input_periodTime.Location = new System.Drawing.Point(37, 172);
-            this.input_periodTime.Name = "input_periodTime";
-            this.input_periodTime.Size = new System.Drawing.Size(264, 26);
-            this.input_periodTime.TabIndex = 5;
             // 
             // label3
             // 
@@ -134,6 +127,13 @@ namespace Siren
             this.label1.Text = "Create Periods";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // input_periodTime
+            // 
+            this.input_periodTime.Location = new System.Drawing.Point(37, 172);
+            this.input_periodTime.Name = "input_periodTime";
+            this.input_periodTime.Size = new System.Drawing.Size(264, 26);
+            this.input_periodTime.TabIndex = 8;
+            // 
             // CreatePeriod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -156,11 +156,11 @@ namespace Siren
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button home_btn;
         private System.Windows.Forms.Button saveperiod_btn;
-        private System.Windows.Forms.DateTimePicker input_periodTime;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox input_periodName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox input_periodTime;
     }
 }
 
