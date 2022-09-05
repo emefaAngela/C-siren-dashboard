@@ -33,8 +33,8 @@ namespace Siren
             this.label1 = new System.Windows.Forms.Label();
             this.createPeriod = new System.Windows.Forms.Button();
             this.Home_btn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Periods_dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Periods_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,30 +80,31 @@ namespace Siren
             this.Home_btn.UseVisualStyleBackColor = false;
             this.Home_btn.Click += new System.EventHandler(this.Home_btn_Click);
             // 
-            // dataGridView1
+            // Periods_dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(211, 267);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(385, 150);
-            this.dataGridView1.TabIndex = 4;
+            this.Periods_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Periods_dataGridView.Location = new System.Drawing.Point(128, 266);
+            this.Periods_dataGridView.Name = "Periods_dataGridView";
+            this.Periods_dataGridView.RowHeadersWidth = 62;
+            this.Periods_dataGridView.RowTemplate.Height = 28;
+            this.Periods_dataGridView.Size = new System.Drawing.Size(548, 150);
+            this.Periods_dataGridView.TabIndex = 4;
+            this.Periods_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Periods_dataGridView_CellContentClick);
             // 
-            // CreatePeriods
+            // ManagePeriods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Periods_dataGridView);
             this.Controls.Add(this.Home_btn);
             this.Controls.Add(this.createPeriod);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CreatePeriods";
+            this.Name = "ManagePeriods";
             this.Text = "CreatePeriods";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Periods_dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +116,6 @@ namespace Siren
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button createPeriod;
         private System.Windows.Forms.Button Home_btn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Periods_dataGridView;
     }
 }
