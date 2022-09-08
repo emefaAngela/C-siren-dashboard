@@ -29,6 +29,7 @@ namespace Siren
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.showPeriods_btn = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,40 +39,46 @@ namespace Siren
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Currenttime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mylabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkViolet;
-            this.panel1.Location = new System.Drawing.Point(-9, -45);
+            this.panel1.Location = new System.Drawing.Point(-9, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(964, 145);
+            this.panel1.Size = new System.Drawing.Size(1029, 99);
             this.panel1.TabIndex = 0;
             // 
             // showPeriods_btn
             // 
             this.showPeriods_btn.AutoSize = true;
-            this.showPeriods_btn.Location = new System.Drawing.Point(442, 158);
+            this.showPeriods_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.showPeriods_btn.Location = new System.Drawing.Point(445, 149);
             this.showPeriods_btn.Name = "showPeriods_btn";
-            this.showPeriods_btn.Size = new System.Drawing.Size(69, 20);
+            this.showPeriods_btn.Size = new System.Drawing.Size(107, 29);
             this.showPeriods_btn.TabIndex = 1;
             this.showPeriods_btn.Text = "Previous";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(429, 233);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(417, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(154, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Current Time";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(456, 318);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(463, 309);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.Size = new System.Drawing.Size(62, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Next";
             // 
@@ -79,6 +86,7 @@ namespace Siren
             // 
             this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(367, 390);
             this.button1.Name = "button1";
@@ -92,6 +100,7 @@ namespace Siren
             // 
             this.button2.BackColor = System.Drawing.Color.Blue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(491, 390);
             this.button2.Name = "button2";
@@ -119,18 +128,36 @@ namespace Siren
             // Currenttime
             // 
             this.Currenttime.AutoSize = true;
-            this.Currenttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Currenttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.Currenttime.ForeColor = System.Drawing.Color.Blue;
-            this.Currenttime.Location = new System.Drawing.Point(442, 267);
+            this.Currenttime.Location = new System.Drawing.Point(431, 267);
             this.Currenttime.Name = "Currenttime";
-            this.Currenttime.Size = new System.Drawing.Size(0, 25);
+            this.Currenttime.Size = new System.Drawing.Size(0, 46);
             this.Currenttime.TabIndex = 9;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // mylabel
+            // 
+            this.mylabel.AutoSize = true;
+            this.mylabel.Location = new System.Drawing.Point(737, 156);
+            this.mylabel.Name = "mylabel";
+            this.mylabel.Size = new System.Drawing.Size(51, 20);
+            this.mylabel.TabIndex = 10;
+            this.mylabel.Text = "label1";
+            this.mylabel.Click += new System.EventHandler(this.mylabel_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 450);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1019, 450);
+            this.Controls.Add(this.mylabel);
             this.Controls.Add(this.Currenttime);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -144,6 +171,7 @@ namespace Siren
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Name = "Home";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
@@ -162,5 +190,7 @@ namespace Siren
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label Currenttime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label mylabel;
     }
 }

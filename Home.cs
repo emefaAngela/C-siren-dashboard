@@ -15,6 +15,7 @@ namespace Siren
         public Home()
         {
             InitializeComponent();
+           
         }
 
         // method to get current time
@@ -65,6 +66,21 @@ namespace Siren
 
             // do recursion
             timer();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer();
+        }
+
+        private void mylabel_Click(object sender, EventArgs e)
+        {
 
         }
     }
