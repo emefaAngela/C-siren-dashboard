@@ -17,6 +17,17 @@ namespace Siren
             InitializeComponent();
         }
 
+        // method to get current time
+        private void timer()
+        {
+            DateTime now = DateTime.Now;
+            now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
+            Currenttime.Text = now.ToString("HH:mm:ss");
+            //System.Threading.Thread.Sleep(1000);
+
+            //timer();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -33,9 +44,9 @@ namespace Siren
 
         private void Currenttime_TextChanged(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
-            Currenttime.Text= now.ToString("HH:mm:ss");
+            //DateTime now = DateTime.Now;
+            //now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
+            //Currenttime.Text= now.ToString("HH:mm:ss");
 
         }
 
@@ -44,11 +55,17 @@ namespace Siren
 
         }
 
+
+
         private void Home_Load(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
-            Currenttime.Text = now.ToString("HH:mm:ss");
+            //DateTime now = DateTime.Now;
+            //now.ToString("yyyy-MM-dd HH:mm:ss"); //Outputs 2014-04-08 12:50:35
+           // Currenttime.Text = now.ToString("HH:mm:ss");
+
+            // do recursion
+            timer();
+
         }
     }
 }

@@ -31,22 +31,22 @@ namespace Siren
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.input_periodTime = new System.Windows.Forms.TextBox();
             this.home_btn = new System.Windows.Forms.Button();
             this.saveperiod_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.input_periodName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.input_periodTime = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrchid;
-            this.panel1.Location = new System.Drawing.Point(-3, -3);
+            this.panel1.Location = new System.Drawing.Point(-3, -44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 89);
+            this.panel1.Size = new System.Drawing.Size(972, 130);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -60,10 +60,18 @@ namespace Siren
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.input_periodName);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(222, 148);
+            this.panel2.Location = new System.Drawing.Point(288, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 262);
             this.panel2.TabIndex = 1;
+            // 
+            // input_periodTime
+            // 
+            this.input_periodTime.Location = new System.Drawing.Point(37, 172);
+            this.input_periodTime.Name = "input_periodTime";
+            this.input_periodTime.Size = new System.Drawing.Size(264, 26);
+            this.input_periodTime.TabIndex = 8;
+            this.input_periodTime.TextChanged += new System.EventHandler(this.input_periodTime_TextChanged);
             // 
             // home_btn
             // 
@@ -127,22 +135,15 @@ namespace Siren
             this.label1.Text = "Create Periods";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // input_periodTime
-            // 
-            this.input_periodTime.Location = new System.Drawing.Point(37, 172);
-            this.input_periodTime.Name = "input_periodTime";
-            this.input_periodTime.Size = new System.Drawing.Size(264, 26);
-            this.input_periodTime.TabIndex = 8;
-            // 
             // CreatePeriod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(969, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreatePeriod";
+            this.ShowIcon = false;
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

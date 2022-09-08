@@ -32,22 +32,24 @@ namespace Siren
         private void saveperiod_btn_Click(object sender, EventArgs e)
         {
             String p_name = input_periodName.Text;
-            String p_time = input_periodTime.Text;
+            int p_time = Convert.ToInt32( input_periodTime.Text);
+            
             DateTime date = DateTime.Today;
            
             //date.ToString().ToString();
 
-            if (p_name != "" && p_time != "")
+            if (p_name != "" )
             {
                 DBconnection dBconnection = new DBconnection();
                 //connection.Open();
                 connection = new MySqlConnection(dBconnection.conn);
                 connection.Open();
-                command = new MySqlCommand("Insert into periods (period_name,period_time,date_of_creation) values(?p_name,?p_time,?date)", connection);
+                //command = new MySqlCommand("select format(getdate(),'hh:mm')");
+                command = new MySqlCommand("Insert into periods (period_name,period_time,date_of_creation) values(?p_name,format(?p_time,'hh:mm:ss'),?date)", connection);
 
                 command.Parameters.AddWithValue("?p_name", p_name);
                 command.Parameters.AddWithValue("?p_time", p_time);
-                command.Parameters.AddWithValue("?date", "date");
+                command.Parameters.AddWithValue("?date", date);
 
 
                 command.ExecuteNonQuery();
@@ -55,7 +57,13 @@ namespace Siren
                 MessageBox.Show("A new Period has been created successfully");
 
 
+//                select format(getdate(),'hh:mm')
 
+//Insert into sometable
+//(timepart)
+//values
+//(
+//format(getdate(), 'hh:mm'))
 
             }
             else
@@ -74,6 +82,11 @@ namespace Siren
                 //}
                 MessageBox.Show("Empty Fields");
             }
+        }
+
+        private void input_periodTime_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

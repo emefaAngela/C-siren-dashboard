@@ -40,16 +40,16 @@ namespace Siren
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkViolet;
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Location = new System.Drawing.Point(-10, -43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 95);
+            this.panel1.Size = new System.Drawing.Size(946, 137);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(333, 163);
+            this.label1.Location = new System.Drawing.Point(410, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 25);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Siren
             this.createPeriod.BackColor = System.Drawing.Color.Blue;
             this.createPeriod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.createPeriod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createPeriod.Location = new System.Drawing.Point(211, 211);
+            this.createPeriod.Location = new System.Drawing.Point(288, 209);
             this.createPeriod.Name = "createPeriod";
             this.createPeriod.Size = new System.Drawing.Size(119, 35);
             this.createPeriod.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace Siren
             this.Home_btn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Home_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Home_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Home_btn.Location = new System.Drawing.Point(338, 211);
+            this.Home_btn.Location = new System.Drawing.Point(415, 209);
             this.Home_btn.Name = "Home_btn";
             this.Home_btn.Size = new System.Drawing.Size(75, 35);
             this.Home_btn.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace Siren
             // Periods_dataGridView
             // 
             this.Periods_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Periods_dataGridView.Location = new System.Drawing.Point(128, 266);
+            this.Periods_dataGridView.Location = new System.Drawing.Point(205, 264);
             this.Periods_dataGridView.Name = "Periods_dataGridView";
             this.Periods_dataGridView.RowHeadersWidth = 62;
             this.Periods_dataGridView.RowTemplate.Height = 28;
@@ -95,14 +95,14 @@ namespace Siren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(937, 450);
             this.Controls.Add(this.Periods_dataGridView);
             this.Controls.Add(this.Home_btn);
             this.Controls.Add(this.createPeriod);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagePeriods";
+            this.ShowIcon = false;
             this.Text = "CreatePeriods";
             ((System.ComponentModel.ISupportInitialize)(this.Periods_dataGridView)).EndInit();
             this.ResumeLayout(false);

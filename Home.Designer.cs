@@ -43,15 +43,15 @@ namespace Siren
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkViolet;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-9, -45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.Size = new System.Drawing.Size(964, 145);
             this.panel1.TabIndex = 0;
             // 
             // showPeriods_btn
             // 
             this.showPeriods_btn.AutoSize = true;
-            this.showPeriods_btn.Location = new System.Drawing.Point(376, 158);
+            this.showPeriods_btn.Location = new System.Drawing.Point(442, 158);
             this.showPeriods_btn.Name = "showPeriods_btn";
             this.showPeriods_btn.Size = new System.Drawing.Size(69, 20);
             this.showPeriods_btn.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Siren
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(363, 233);
+            this.label2.Location = new System.Drawing.Point(429, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace Siren
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(390, 318);
+            this.label3.Location = new System.Drawing.Point(456, 318);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace Siren
             this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(301, 390);
+            this.button1.Location = new System.Drawing.Point(367, 390);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 32);
             this.button1.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Siren
             this.button2.BackColor = System.Drawing.Color.Blue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(425, 390);
+            this.button2.Location = new System.Drawing.Point(491, 390);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 32);
             this.button2.TabIndex = 5;
@@ -103,14 +103,14 @@ namespace Siren
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 341);
+            this.textBox1.Location = new System.Drawing.Point(367, 341);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(224, 26);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 181);
+            this.textBox2.Location = new System.Drawing.Point(367, 181);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(224, 26);
             this.textBox2.TabIndex = 7;
@@ -121,7 +121,7 @@ namespace Siren
             this.Currenttime.AutoSize = true;
             this.Currenttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Currenttime.ForeColor = System.Drawing.Color.Blue;
-            this.Currenttime.Location = new System.Drawing.Point(376, 267);
+            this.Currenttime.Location = new System.Drawing.Point(442, 267);
             this.Currenttime.Name = "Currenttime";
             this.Currenttime.Size = new System.Drawing.Size(0, 25);
             this.Currenttime.TabIndex = 9;
@@ -130,7 +130,7 @@ namespace Siren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(949, 450);
             this.Controls.Add(this.Currenttime);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -142,8 +142,8 @@ namespace Siren
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
+            this.ShowIcon = false;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
